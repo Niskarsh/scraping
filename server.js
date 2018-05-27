@@ -16,33 +16,7 @@ app.get("/:name/:id",(req,res)=>{
     var id = req.params.id;
     console.log(name+" "+id);
     
-    // request("https://www.moneycontrol.com/financials/"+name+"/balance-sheetVI/"+id,function(error,response,html){
-    //     var arr=[];
-        
-    //     var $ = cheerio.load(html);
-    //     var box = $("div.boxBg1");
-    //     var a= box.children("table.table4").next().children().children();
-    //     var b = a.eq(12).children().eq(0).text();
-        
-    //     a.each(function(i, element){
-    //         var b =a.eq(i).children();
-    //         var arr_mid = [];    
-    //         b.each(function(j,element){
-    //             if(j!=0){
-    //                 arr_mid.push(b.eq(j).text());
-    //             }
-                
-    //         });
-    //         arr.push(b.eq(0).text(),arr_mid);
-            
-    //     });
-    //     nik.push("FINANCIALS",arr); 
-           
-        
-        
-        
-    // });
-
+    
     request("https://www.moneycontrol.com/financials/"+name+"/balance-sheetVI/"+id).then(function(html){
         var arr=[];
         
