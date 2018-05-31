@@ -1,7 +1,6 @@
 var express = require("express");
 var bodyparser = require("body-parser");
 var request = require("request-promise");
-var request1 = require("request");
 var cheerio = require("cheerio");
 
 app=express();
