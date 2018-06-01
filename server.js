@@ -15,8 +15,7 @@ app.get("/:name/:id",async (req,res)=>{
     var name= req.params.name;
     var id = req.params.id;
     console.log(name+" "+id);
-    
-    
+        
     await request("https://www.moneycontrol.com/financials/"+name+"/balance-sheetVI/"+id).then(function(html){
         var arr=[];
         
